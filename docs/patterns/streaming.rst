@@ -13,7 +13,7 @@ HTTP Response Behavior
 
 **Headers cannot be changed after the streaming response starts.**
 
-When using streaming, it's important to be aware of the order than an HTTP
+When using streaming, it's important to be aware of the order that an HTTP
 response is sent. All headers must be sent first, then the body. More headers
 cannot be sent after the body has begun. Therefore, you must make sure all
 headers are set before starting the response, outside the generator.
