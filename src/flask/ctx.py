@@ -162,7 +162,7 @@ def copy_current_request_context(f: F) -> F:
         the data you need when starting the task, rather than using this and
         relying on the context objects.
 
-    In order to avoid execution switching partially though reading data, either
+    In order to avoid execution switching partially through reading data, either
     read the request body (access ``form``, ``json``, ``data``, etc) before
     starting the task, or use a lock. This can be an issue when using threading,
     but shouldn't be an issue when using greenlet/gevent or asyncio.
